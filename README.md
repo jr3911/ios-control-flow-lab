@@ -15,7 +15,10 @@ What will be printed when the code below is run?  Select all that apply.
 
 ```swift
 let conditionOne = !(4 < 5) || !(3 > 8)
+// conditionOne = false || true = true
+
 let conditionTwo = !(!true)
+// conditionTwo = true
 
 if conditionOne {
  print("A")
@@ -26,10 +29,13 @@ if conditionTwo {
  print("C")
 }
 print("D")
+
+// "A" is printed
+// "C" is printed
+// "D" is printed
 ```
 
 - A
-- B
 - C
 - D
 
@@ -50,11 +56,7 @@ switch appInfo {
 }
 ```
 
-- appInfo.0 hasn't released yet
 - myCoolApp hasn't released yet
-- Thanks for looking at myCoolApp!
-- I'm not quite sure what you are looking at
-- It will give a compile-time error
 
 ***
 ## Question 3
@@ -63,21 +65,18 @@ What will be printed to the console when the code below is run?  Select all that
 
 ```swift
 let x: Int = 4
+
 switch x {
-case 0..<4:
- print("A")
-case 5..<10:
- print("B")
-case is Double:
- print("C")
-default:
- print("D")
+    case 0..<4:
+        print("A")
+    case 5..<10:
+        print("B")
+    case is Double:
+        print("C")
+    default:
+        print("D")
 }
 ```
-
-- A
-- B
-- C
 - D
 
 ***
@@ -89,19 +88,15 @@ What are the errors in the code below for the switch statement? Select all that 
 let candyType : String = "skittles"
 
 switch candyType {
-case "mAndM":
- print("Melts in your mouth, not in your hand")
-case "skittles":
- print("Taste the rainbow")
-case "snickers":
- print("Hungry? Grab a Snickers")
+    case "mAndM":
+        print("Melts in your mouth, not in your hand")
+    case "skittles":
+        print("Taste the rainbow")
+    case "snickers":
+        print("Hungry? Grab a Snickers")
 }
 ```
-
-- No parentheses around the conditions
-- No opening and closing brackets in each of the cases
 - No default case in the switch statement
-- No print statement right outside the switch statement
 
 ***
 ## Question 5
@@ -111,7 +106,16 @@ Given the current weather conditions (rain, sunny, snow), use a switch statement
 ```swift
 let currentWeather = "rain"
 
-// enter code below
+switch currentWeather {
+    case "rain":
+        print("It's raining")
+    case "sunny":
+        print("It's sunny")
+    case "snow":
+        print("It's snowing")
+    default:
+        print("Try again later")
+}
 ```
 
 ***
@@ -123,7 +127,8 @@ Given the first name and last name of a Fellow, declare `fullName` variable and 
 let firstName = "John"
 let lastName = "Appleseed"
 
-// enter code below
+var fullName = "\(firstName) \(lastName)"
+print(fullName)
 ```
 
 ***
